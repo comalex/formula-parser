@@ -42,7 +42,7 @@ class Parser extends Emitter {
   parse(expression) {
     let result = null;
     let error = null;
-
+    let originError = null;
     try {
       if (expression === '') {
         result = '';
@@ -50,6 +50,7 @@ class Parser extends Emitter {
         result = this.parser.parse(expression);
       }
     } catch (ex) {
+      originError = ex;
       const message = errorParser(ex.message);
 
       if (message) {
@@ -65,6 +66,7 @@ class Parser extends Emitter {
     }
 
     return {
+      originError,
       error,
       result,
     };
