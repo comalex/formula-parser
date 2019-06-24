@@ -1,5 +1,5 @@
 {
-  "name": "hot-formula-parser",
+  "name": "hot-formula-parser-alex",
   "version": "3.0.1",
   "description": "Formula parser",
   "browser": "dist/formula-parser.js",
